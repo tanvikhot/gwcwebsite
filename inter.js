@@ -55,6 +55,20 @@ function showPic3(){
     y++;
   }
 }
+
+function hidePic4(){
+  document.getElementById('Im4').style.display = "none";
+}
+var p = 0;
+function showPic4(){
+  if(p%2 == 0){
+    document.getElementById('Im4').style.display = "block";
+    p++;
+  }else{
+    document.getElementById('Im4').style.display = "none";
+    p++;
+  }
+}
 var e = 0;
 function changePic(){
   if(e%3 == 0){
