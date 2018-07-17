@@ -1,74 +1,180 @@
-var i = 0;
-function changeHeading(){
-  if(i%3 === 0){
-    document.getElementById("heading").innerHTML = "Age: 16";
-  }
-  else if(i%3 === 1){
-    document.getElementById("heading").innerHTML = "Interests: Basketball, Art, Reading, and Coding";
-  }
-  else{
-    document.getElementById("heading").innerHTML = "Get to know me!";
-  }
-  i++;
-}
-var a = 0;
-function hidePic(){
-  document.getElementById('myIm2').style.display = "none";
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <style>
+      div{
+          text-align: center;
+          font-size: 25px;
+      }
+      .alert-link {
+        color: pink;
+      }
+      img{
 
-function showPic(){
-  if(a%2 == 0){
-    document.getElementById('myIm2').style.display = "block";
-    a++;
-  }else{
-    document.getElementById('myIm2').style.display = "none";
-    a++;
-  }
-}
+      }
+      h1{
+          color: purple;
+          text-align: center;
+          font-style: italic;
+      }
+      .center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+      }
+      .center1{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      p{
+        text-align: center;
+      }
+      h3{
+        text-align: center;
+      }
+      button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-function hidePic2(){
-  document.getElementById('myIm').style.display = "none";
+    </style>
 
-}
-var x = 0;
-function showPic2(){
-  if(x%2 == 0){
-    document.getElementById('myIm').style.display = "block";
-    x++;
-  }else{
-    document.getElementById('myIm').style.display = "none";
-    x++;
-  }
-}
+    <script src="inter.js"></script>
+  </head>
 
-function hidePic3(){
-  document.getElementById('Im3').style.display = "none";
-}
-var y = 0;
-function showPic3(){
-  if(y%2 == 0){
-    document.getElementById('Im3').style.display = "block";
-    y++;
-  }else{
-    document.getElementById('Im3').style.display = "none";
-    y++;
-  }
-}
-var e = 0;
-function changePic(){
-  if(e%3 == 0){
-    // document.getElementById('face').style = "transform:rotate(90deg);";
-    document.getElementById('face').src = "pic3.JPG";
+  <body onload = "hidePic(); hidePic2(); hidePic3;">
+    <h1>Tanvi Khot</h1>
 
-    e++;
-  }else if(e%3 == 1){
-    document.getElementById('face').src = "pic4.JPG";
-    e++;
-  }else{
+    <h3 id="heading" onclick="changeHeading()">Get to know me!</h3>
 
-    document.getElementById('face').src = "picture.JPG";
+    <img id = "face" onmouseover= "changePic()" src="picture.JPG" alt = "Pictures of Tanvi" class="center"></img>
 
-    e++;
-  }
-}
+    <p> some pictures of me and my friends! </p>
+    <!--<img src="picture2.JPG"></img> -->
+    <div class="alert alert-dark" role="alert">
+      <strong> Bio</strong>
+    </div>
+      <div class="alert alert-primary" role="alert">
+        My name is Tanvi Khot. I am a junior at Cupertino High School.
+         I am very interested in Computer Science and participate in many organizations accordingly.
+          I am also interested in being an active member in my community and school.
+          My favorite subjects in school are <a href="https://clubpenguinonline.com" class="alert-link">CS</a> and Math.
+
+
+      </div>
+      <div class="alert alert-dark" role="alert">
+        <strong> Accomplishments </strong>
+      </div>
+      <div class="alert alert-info" role="alert">
+        <a href = "http://www.cupertino.org/our-city/commissions/teen-commission" class="alert-link" >Teen Commision Member </a>, September 2018 - Present <br>
+        The powers and functions of the Teen Commission are to advise the City Council and staff on issues and projects important to youth.
+         I have Organized Several events with Teen Commission such as Pizza and Politics and Hack Cupertino.
+      </div>
+      <div class="alert alert-success" role="alert">
+        <a href = "http://www.fbla-pbl.org/middle-level/" class="alert-link" >FBLA Middle Level Member </a>, July 2017 - July 2018 <br>
+        Created Lesson Plans for the Middle School section of FBLA
+        Taught and mentored the students in the clubs about current events, economics, and business
+
+      </div>
+      <div class="alert alert-info" role="alert">
+        <a href = "https://girlswhocode.com/summer-immersion-programs/" class="alert-link" >Girls Who Code and Amazon Lab126 Student Intern </a>, June 2018 - August 2018 <br>
+        300+ hours of immersive instruction in web development and design, robotics, and mobile development with mentorship and exposure to top female engineers and entrepreneurs
+
+      </div>
+      <div class="alert alert-success" role="alert">
+        <a href = "https://www.codingdojo.com/meet-coding-dojo/ga/codingbootcamp/sj?gclid=CjwKCAjwhLHaBRAGEiwAHCgG3imc7JvHCdsIn5uQtMb4rYgVCVLW13VT9_BJY8NyU4FEL0QEsXn8sRoCclkQAvD_BwE" class="alert-link" >Coding Dojo Mentor </a>, November 2017 - Present<br>
+        Taught scratch to middle and elementary school students
+        Taught python to highschool and middle school students
+      </div>
+      <div class="alert alert-dark" role="alert">
+        <strong> Check me out here: </strong>
+      </div>
+      <div class="alert alert-primary" role="alert">
+        <a href = "https://www.linkedin.com/in/tanvi-khot-311809132/" class="alert-link" >Linkedin </a><br>
+      </div>
+      <div class="alert alert-info" role="alert">
+        <a href = "https://www.facebook.com/tanvikhott" class="alert-link" >FaceBook </a><br>
+      </div>
+      <div class="alert alert-primary" role="alert">
+        <a href = "https://www.instagram.com/binchtanvi/?hl=en" class="alert-link" >Instagram </a><br>
+      </div>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <button onclick="showPic()">Club penguin secrets</button>
+      <br><br>
+      <img id = "myIm2" src="pic.jpg" class="center1"></img>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <button onclick="showPic2()">Club penuin secrets Pt.2</button>
+      <br><br>
+      <img id = "myIm" src="penguin.jpg" class="center"></img>
+      <br>
+        <br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+      <button onclick="showPic3()">Club penuin secrets Pt.tree</button>
+      <br><br>
+      <img id = "Im3" src="pic5.jpg" class="center"></img>
+      <br>
+        <br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+      <p> © Tanvi Khot 2018 </p>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  </body>
+</html>
